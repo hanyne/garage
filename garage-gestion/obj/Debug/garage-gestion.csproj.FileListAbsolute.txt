@@ -1,0 +1,6 @@
+C:\Users\eki\source\repos\garage-gestion\garage-gestion\obj\Debug\garage-gestion.csproj.AssemblyReference.cache
+C:\Users\eki\source\repos\garage-gestion\garage-gestion\obj\Debug\garage_gestion.Properties.Resources.resources
+C:\Users\eki\source\repos\garage-gestion\garage-gestion\obj\Debug\garage_gestion.view.login.resources
+C:\Users\eki\source\repos\garage-gestion\garage-gestion\obj\Debug\garage_gestion.view.menu.resources
+C:\Users\eki\source\repos\garage-gestion\garage-gestion\obj\Debug\garage-gestion.csproj.GenerateResource.cache
+C:\Users\eki\source\repos\garage-gestion\garage-gestion\obj\Debug\garage-gestion.csproj.CoreCompileInputs.cache

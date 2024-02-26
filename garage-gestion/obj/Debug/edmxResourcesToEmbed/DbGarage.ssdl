@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GarageModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Nom" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Prenom" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Adresse" Type="nvarchar" MaxLength="100" />
+    <Property Name="Telephone" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Employes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Nom" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Prenom" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Poste" Type="nvarchar" MaxLength="50" />
+    <Property Name="Salaire" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Fournisseurs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Nom" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Adresse" Type="nvarchar" MaxLength="100" />
+    <Property Name="Telephone" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Services">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Nom" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" />
+    <Property Name="Cout" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="VehiculeID" Type="int" />
+  </EntityType>
+  <EntityType Name="Utilisateurs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="NomUtilisateur" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MotDePasse" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Vehicules">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Marque" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Modele" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Annee" Type="int" />
+    <Property Name="Prix" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="FournisseurID" Type="int" />
+    <Property Name="ClientID" Type="int" />
+  </EntityType>
+  <Association Name="FK_ClientID">
+    <End Role="Clients" Type="Self.Clients" Multiplicity="0..1" />
+    <End Role="Vehicules" Type="Self.Vehicules" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Vehicules">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FournisseurID">
+    <End Role="Fournisseurs" Type="Self.Fournisseurs" Multiplicity="0..1" />
+    <End Role="Vehicules" Type="Self.Vehicules" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fournisseurs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Vehicules">
+        <PropertyRef Name="FournisseurID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VehiculeID">
+    <End Role="Vehicules" Type="Self.Vehicules" Multiplicity="0..1" />
+    <End Role="Services" Type="Self.Services" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicules">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Services">
+        <PropertyRef Name="VehiculeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GarageModelStoreContainer">
+    <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employes" EntityType="Self.Employes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Fournisseurs" EntityType="Self.Fournisseurs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Utilisateurs" EntityType="Self.Utilisateurs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vehicules" EntityType="Self.Vehicules" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ClientID" Association="Self.FK_ClientID">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Vehicules" EntitySet="Vehicules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FournisseurID" Association="Self.FK_FournisseurID">
+      <End Role="Fournisseurs" EntitySet="Fournisseurs" />
+      <End Role="Vehicules" EntitySet="Vehicules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VehiculeID" Association="Self.FK_VehiculeID">
+      <End Role="Vehicules" EntitySet="Vehicules" />
+      <End Role="Services" EntitySet="Services" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

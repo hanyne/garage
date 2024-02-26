@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GarageModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Nom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Prenom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Adresse" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Vehicules" Relationship="Self.FK_ClientID" FromRole="Clients" ToRole="Vehicules" />
+  </EntityType>
+  <EntityType Name="Employes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Nom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Prenom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Poste" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Salaire" Type="Decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Fournisseurs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Nom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Adresse" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Vehicules" Relationship="Self.FK_FournisseurID" FromRole="Fournisseurs" ToRole="Vehicules" />
+  </EntityType>
+  <EntityType Name="Services">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Nom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Cout" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="VehiculeID" Type="Int32" />
+    <NavigationProperty Name="Vehicules" Relationship="Self.FK_VehiculeID" FromRole="Services" ToRole="Vehicules" />
+  </EntityType>
+  <EntityType Name="Utilisateurs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="NomUtilisateur" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MotDePasse" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Vehicules">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Marque" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Modele" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Annee" Type="Int32" />
+    <Property Name="Prix" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="FournisseurID" Type="Int32" />
+    <Property Name="ClientID" Type="Int32" />
+    <NavigationProperty Name="Clients" Relationship="Self.FK_ClientID" FromRole="Vehicules" ToRole="Clients" />
+    <NavigationProperty Name="Fournisseurs" Relationship="Self.FK_FournisseurID" FromRole="Vehicules" ToRole="Fournisseurs" />
+    <NavigationProperty Name="Services" Relationship="Self.FK_VehiculeID" FromRole="Vehicules" ToRole="Services" />
+  </EntityType>
+  <Association Name="FK_ClientID">
+    <End Role="Clients" Type="Self.Clients" Multiplicity="0..1" />
+    <End Role="Vehicules" Type="Self.Vehicules" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Vehicules">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FournisseurID">
+    <End Role="Fournisseurs" Type="Self.Fournisseurs" Multiplicity="0..1" />
+    <End Role="Vehicules" Type="Self.Vehicules" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fournisseurs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Vehicules">
+        <PropertyRef Name="FournisseurID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VehiculeID">
+    <End Role="Vehicules" Type="Self.Vehicules" Multiplicity="0..1" />
+    <End Role="Services" Type="Self.Services" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicules">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Services">
+        <PropertyRef Name="VehiculeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbGarage" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clients" EntityType="Self.Clients" />
+    <EntitySet Name="Employes" EntityType="Self.Employes" />
+    <EntitySet Name="Fournisseurs" EntityType="Self.Fournisseurs" />
+    <EntitySet Name="Services" EntityType="Self.Services" />
+    <EntitySet Name="Utilisateurs" EntityType="Self.Utilisateurs" />
+    <EntitySet Name="Vehicules" EntityType="Self.Vehicules" />
+    <AssociationSet Name="FK_ClientID" Association="Self.FK_ClientID">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Vehicules" EntitySet="Vehicules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FournisseurID" Association="Self.FK_FournisseurID">
+      <End Role="Fournisseurs" EntitySet="Fournisseurs" />
+      <End Role="Vehicules" EntitySet="Vehicules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VehiculeID" Association="Self.FK_VehiculeID">
+      <End Role="Vehicules" EntitySet="Vehicules" />
+      <End Role="Services" EntitySet="Services" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
