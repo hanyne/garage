@@ -1,0 +1,135 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\eki\\Desktop\\garage-gestion\\garage\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EC96F4B8-C2E5-4CD5-8337-821AFBAA9D9E}|garage-gestion\\garage-gestion.csproj|C:\\Users\\eki\\Desktop\\garage-gestion\\garage\\garage-gestion\\view\\connexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC96F4B8-C2E5-4CD5-8337-821AFBAA9D9E}|garage-gestion\\garage-gestion.csproj|solutionrelative:garage-gestion\\view\\connexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC96F4B8-C2E5-4CD5-8337-821AFBAA9D9E}|garage-gestion\\garage-gestion.csproj|C:\\Users\\eki\\Desktop\\garage-gestion\\garage\\garage-gestion\\view\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EC96F4B8-C2E5-4CD5-8337-821AFBAA9D9E}|garage-gestion\\garage-gestion.csproj|solutionrelative:garage-gestion\\view\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC96F4B8-C2E5-4CD5-8337-821AFBAA9D9E}|garage-gestion\\garage-gestion.csproj|c:\\users\\eki\\desktop\\garage-gestion\\garage\\garage-gestion\\view\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC96F4B8-C2E5-4CD5-8337-821AFBAA9D9E}|garage-gestion\\garage-gestion.csproj|solutionrelative:garage-gestion\\view\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC96F4B8-C2E5-4CD5-8337-821AFBAA9D9E}|garage-gestion\\garage-gestion.csproj|C:\\Users\\eki\\Desktop\\garage-gestion\\garage\\garage-gestion\\view\\connexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EC96F4B8-C2E5-4CD5-8337-821AFBAA9D9E}|garage-gestion\\garage-gestion.csproj|solutionrelative:garage-gestion\\view\\connexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC96F4B8-C2E5-4CD5-8337-821AFBAA9D9E}|garage-gestion\\garage-gestion.csproj|C:\\Users\\eki\\Desktop\\garage-gestion\\garage\\garage-gestion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC96F4B8-C2E5-4CD5-8337-821AFBAA9D9E}|garage-gestion\\garage-gestion.csproj|solutionrelative:garage-gestion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC96F4B8-C2E5-4CD5-8337-821AFBAA9D9E}|garage-gestion\\garage-gestion.csproj|C:\\Users\\eki\\Desktop\\garage-gestion\\garage\\garage-gestion\\classe\\cls_connexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC96F4B8-C2E5-4CD5-8337-821AFBAA9D9E}|garage-gestion\\garage-gestion.csproj|solutionrelative:garage-gestion\\classe\\cls_connexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC96F4B8-C2E5-4CD5-8337-821AFBAA9D9E}|garage-gestion\\garage-gestion.csproj|C:\\Users\\eki\\Desktop\\garage-gestion\\garage\\garage-gestion\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{EC96F4B8-C2E5-4CD5-8337-821AFBAA9D9E}|garage-gestion\\garage-gestion.csproj|solutionrelative:garage-gestion\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "menu.cs",
+              "DocumentMoniker": "C:\\Users\\eki\\Desktop\\garage-gestion\\garage\\garage-gestion\\view\\menu.cs",
+              "RelativeDocumentMoniker": "garage-gestion\\view\\menu.cs",
+              "ToolTip": "C:\\Users\\eki\\Desktop\\garage-gestion\\garage\\garage-gestion\\view\\menu.cs",
+              "RelativeToolTip": "garage-gestion\\view\\menu.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAAADEAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T21:08:23.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "menu.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\eki\\Desktop\\garage-gestion\\garage\\garage-gestion\\view\\menu.cs",
+              "RelativeDocumentMoniker": "garage-gestion\\view\\menu.cs",
+              "ToolTip": "C:\\Users\\eki\\Desktop\\garage-gestion\\garage\\garage-gestion\\view\\menu.cs [Design]",
+              "RelativeToolTip": "garage-gestion\\view\\menu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T21:08:22.386Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "connexion.cs",
+              "DocumentMoniker": "C:\\Users\\eki\\Desktop\\garage-gestion\\garage\\garage-gestion\\view\\connexion.cs",
+              "RelativeDocumentMoniker": "garage-gestion\\view\\connexion.cs",
+              "ToolTip": "C:\\Users\\eki\\Desktop\\garage-gestion\\garage\\garage-gestion\\view\\connexion.cs",
+              "RelativeToolTip": "garage-gestion\\view\\connexion.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAAACoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T21:05:27.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "connexion.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\eki\\Desktop\\garage-gestion\\garage\\garage-gestion\\view\\connexion.cs",
+              "RelativeDocumentMoniker": "garage-gestion\\view\\connexion.cs",
+              "ToolTip": "C:\\Users\\eki\\Desktop\\garage-gestion\\garage\\garage-gestion\\view\\connexion.cs [Design]",
+              "RelativeToolTip": "garage-gestion\\view\\connexion.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T21:04:22.748Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\eki\\Desktop\\garage-gestion\\garage\\garage-gestion\\App.config",
+              "RelativeDocumentMoniker": "garage-gestion\\App.config",
+              "ToolTip": "C:\\Users\\eki\\Desktop\\garage-gestion\\garage\\garage-gestion\\App.config",
+              "RelativeToolTip": "garage-gestion\\App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-02-27T19:16:43.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\eki\\Desktop\\garage-gestion\\garage\\garage-gestion\\Program.cs",
+              "RelativeDocumentMoniker": "garage-gestion\\Program.cs",
+              "ToolTip": "C:\\Users\\eki\\Desktop\\garage-gestion\\garage\\garage-gestion\\Program.cs",
+              "RelativeToolTip": "garage-gestion\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T19:16:36.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Cls_connexion.cs",
+              "DocumentMoniker": "C:\\Users\\eki\\Desktop\\garage-gestion\\garage\\garage-gestion\\classe\\Cls_connexion.cs",
+              "RelativeDocumentMoniker": "garage-gestion\\classe\\Cls_connexion.cs",
+              "ToolTip": "C:\\Users\\eki\\Desktop\\garage-gestion\\garage\\garage-gestion\\classe\\Cls_connexion.cs",
+              "RelativeToolTip": "garage-gestion\\classe\\Cls_connexion.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBMAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T19:17:00.603Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

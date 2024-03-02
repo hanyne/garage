@@ -113,11 +113,11 @@
     <Compile Include="Vehicules.cs">
       <DependentUpon>DbGarage.tt</DependentUpon>
     </Compile>
-    <Compile Include="view\login.cs">
+    <Compile Include="view\connexion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\login.Designer.cs">
-      <DependentUpon>login.cs</DependentUpon>
+    <Compile Include="view\connexion.Designer.cs">
+      <DependentUpon>connexion.cs</DependentUpon>
     </Compile>
     <Compile Include="view\menu.cs">
       <SubType>Form</SubType>
@@ -134,8 +134,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="view\login.resx">
-      <DependentUpon>login.cs</DependentUpon>
+    <EmbeddedResource Include="view\connexion.resx">
+      <DependentUpon>connexion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\menu.resx">
       <DependentUpon>menu.cs</DependentUpon>

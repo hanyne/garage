@@ -21,8 +21,8 @@ namespace garage_gestion.view
             // ... Disable other buttons
 
             // Show the login form
-            login loginForm = new login(this); // Pass 'this' (menu form) to handle returning to this form after login
-            loginForm.ShowDialog();
+            connexion connexion = new connexion(this); // Pass 'this' (menu form) to handle returning to this form after login
+            connexion.ShowDialog();
         }
 
 
@@ -189,7 +189,7 @@ namespace garage_gestion.view
 
         private void connecter_Click(object sender, EventArgs e)
         {
-            login cnx = new login(this);// this = menu
+            connexion cnx = new connexion(this);// this = menu
             cnx.ShowDialog();
         }
 
